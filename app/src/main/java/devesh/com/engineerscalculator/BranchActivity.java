@@ -31,6 +31,9 @@ public class BranchActivity extends AppCompatActivity {
         progressDialog1= new ProgressDialog(BranchActivity.this);
         progressDialog1.setMessage("Loading");
 
+        progressDialog1.setCanceledOnTouchOutside(false);
+        progressDialog1.setCancelable(false);
+
         rootref= FirebaseDatabase.getInstance().getReference();
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -82,4 +85,13 @@ public class BranchActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+        finish();
+    }
+
 }
