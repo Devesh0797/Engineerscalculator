@@ -14,8 +14,8 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     private EditText e1,e2,e3;
+    private TextView t1;
     private Button b1;
-    private int TotalLecture=416;
     public static int a,d,g;
 
 
@@ -28,7 +28,16 @@ public class MainActivity extends AppCompatActivity {
         e2=(EditText)findViewById(R.id.et_lecture);
         e3=(EditText)findViewById(R.id.et_percent);
 
+        t1=(TextView)findViewById(R.id.tv_dept);
+
         b1=(Button)findViewById(R.id.btn_cal);
+
+        if(BranchActivity.TotalLecture==416){
+            t1.setText("Information Technology");
+        }
+        else if(BranchActivity.TotalLecture==427){
+            t1.setText("Mechanical");
+        }
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
                     int Absent = Lecture - present;
                     float y1 = (float)percent/100;
 
-                    y1=y1*TotalLecture;
+                    y1=y1*BranchActivity.TotalLecture;
                     int y = (int)y1;
 
-                    int z = TotalLecture - y;
+                    int z = BranchActivity.TotalLecture - y;
                     a= z - Absent;
                     int b = present + a;
-                    int c = TotalLecture - b;
+                    int c = BranchActivity.TotalLecture - b;
                     d= c - Absent;
                     float e = (float) present/Lecture;
                     e=e*100;
@@ -80,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     else if(Absent<0){
                         Toast.makeText(MainActivity.this, "Enter the Data in correct way..", Toast.LENGTH_SHORT).show();
                     }
-                    else if(Lecture>TotalLecture){
+                    else if(Lecture>BranchActivity.TotalLecture){
                         Toast.makeText(MainActivity.this, "Working on update...", Toast.LENGTH_SHORT).show();
                     }
                     else if(a<0){
@@ -92,12 +101,14 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
-
-
-
-
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(MainActivity.this,BranchActivity.class));
+        finish();
     }
 }

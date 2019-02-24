@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "298220557357",
+    "firebase_url": "https://engineerscalculator-66d90.firebaseio.com",
+    "project_id": "engineerscalculator-66d90",
+    "storage_bucket": "engineerscalculator-66d90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298220557357:android:d890924d75d966ec",
+        "android_client_info": {
+          "package_name": "devesh.com.engineerscalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298220557357-t273bbh64tm6rjb9t2ujse6k0o9nvvv2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "devesh.com.engineerscalculator",
+            "certificate_hash": "172a013f72696696e49f804cd2e6dd1e619f55df"
+          }
+        },
+        {
+          "client_id": "298220557357-6nf3v89tsbr41jtsf1g0hep9cb5i23o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQY5RH8i11fOoPHbyRDLKJEpzAsL9dNoM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298220557357-6nf3v89tsbr41jtsf1g0hep9cb5i23o9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
