@@ -57,7 +57,7 @@
 
             <TextView
                 android:id="@+id/tv_percent"
-                android:layout_width="70dp"
+                android:layout_width="79dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"

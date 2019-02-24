@@ -26,10 +26,14 @@ public class ResultActivity extends AppCompatActivity {
         }
         else {
             p1.setProgress(MainActivity.g);
-            t2.setText(MainActivity.g+"%");
-            int n=MainActivity.a-5;
-            int m= MainActivity.d+5;
-            t1.setText("Number of lectures you can bunk : "+n+"-" + MainActivity.a + "\n" + "No. of lectures You have to attend: " + MainActivity.d+"-"+m);
+            t2.setText(MainActivity.g + "%");
+            int n = MainActivity.a - 5;
+            int m = MainActivity.d + 5;
+            if (n < 0) {
+                t1.setText("Number of lectures you can bunk : " + MainActivity.a + "\n" + "No. of lectures You have to attend: " + MainActivity.d + "-" + m);
+            } else {
+                t1.setText("Number of lectures you can bunk : " + n + "-" + MainActivity.a + "\n" + "No. of lectures You have to attend: " + MainActivity.d + "-" + m);
+            }
         }
     }
 
