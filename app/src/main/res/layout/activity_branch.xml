@@ -33,7 +33,7 @@
 
             <TextView
                 android:id="@+id/tv_depart"
-                android:layout_width="293dp"
+                android:layout_width="324dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Select Your Branch"
