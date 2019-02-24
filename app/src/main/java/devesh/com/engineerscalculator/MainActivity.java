@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText e1,e2,e3;
     private Button b1;
     private int TotalLecture=416;
-    public static int a,d;
+    public static int a,d,g;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
                     int b = present + a;
                     int c = TotalLecture - b;
                     d= c - Absent;
+                    float e = (float) present/Lecture;
+                    e=e*100;
+                    float f = e - (int)e;
+                    if(f>=0.5){
+                         g = (int)e +1;
+                    }
+                    if(f<0.5){
+                         g = (int)e;
+                    }
+
                     if(percent>100){
                         Toast.makeText(MainActivity.this, "Enter the correct Percentage", Toast.LENGTH_SHORT).show();
                     }
