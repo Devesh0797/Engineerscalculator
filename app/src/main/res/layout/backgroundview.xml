@@ -21,7 +21,7 @@
             android:textAllCaps="true"
 
             android:textColor="@android:color/background_dark"
-            android:textSize="23sp" />
+            android:textSize="20sp" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
