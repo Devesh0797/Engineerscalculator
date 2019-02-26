@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText e1,e2,e3;
     private TextView t1;
     private Button b1;
-    public static int a,d,g;
+    public static int a,d,g,Absent;
+    public static String Lecture1,Percent1,present1;
 
 
     @Override
@@ -41,13 +42,16 @@ public class MainActivity extends AppCompatActivity {
         else if(BranchActivity.a==3){
             t1.setText("Electronics");
         }
+        else if(BranchActivity.a==4){
+            t1.setText("Computer Science");
+        }
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String present1 = e1.getText().toString();
-                String Lecture1 = e2.getText().toString();
-                String Percent1= e3.getText().toString();
+                present1 = e1.getText().toString();
+                Lecture1 = e2.getText().toString();
+                Percent1= e3.getText().toString();
                 if(TextUtils.isEmpty(present1)){
                     Toast.makeText(MainActivity.this, "Enter the no. of Lectures Attended", Toast.LENGTH_SHORT).show();
                 }
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     int Lecture = Integer.parseInt(Lecture1);
                     int percent= Integer.parseInt(Percent1);
 
-                    int Absent = Lecture - present;
+                     Absent = Lecture - present;
                     float y1 = (float)percent/100;
 
                     y1=y1*BranchActivity.TotalLecture;
