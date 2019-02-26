@@ -32,11 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         b1=(Button)findViewById(R.id.btn_cal);
 
-        if(BranchActivity.TotalLecture==416){
+        if(BranchActivity.a==1){
             t1.setText("Information Technology");
         }
-        else if(BranchActivity.TotalLecture==427){
+        else if(BranchActivity.a==2){
             t1.setText("Mechanical");
+        }
+        else if(BranchActivity.a==3){
+            t1.setText("Electronics");
         }
 
         b1.setOnClickListener(new View.OnClickListener() {
