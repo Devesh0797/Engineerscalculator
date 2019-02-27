@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button b1;
     public static int a,d,g,Absent;
     public static String Lecture1,Percent1,present1;
+    public static int lectureint;
 
 
     @Override
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     int present = Integer.parseInt(present1);
                     int Lecture = Integer.parseInt(Lecture1);
+                    lectureint=Lecture;
                     int percent= Integer.parseInt(Percent1);
 
                      Absent = Lecture - present;

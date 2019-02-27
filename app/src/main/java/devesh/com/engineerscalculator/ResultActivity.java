@@ -26,12 +26,13 @@ public class ResultActivity extends AppCompatActivity {
         t3.setText(" Present-      " + MainActivity.present1 );
         t4.setText("  Absent-       "+MainActivity.Absent);
         t5.setText("Lectures-     "+MainActivity.Lecture1);
+        int remaininglec=BranchActivity.TotalLecture-MainActivity.lectureint;
 
         if(MainActivity.d<0){
             p1.setProgress(MainActivity.g);
             t2.setText(MainActivity.g+"%");
 
-            t1.setText("Number of lectures you can bunk :- " + MainActivity.a +"\n"+ "No. of lectures You have to attend:- 0" );
+            t1.setText("Number of lectures you can bunk :- "+ remaininglec  +"\n"+ "No. of lectures You have to attend:- 0" );
         }
 
         else {
@@ -41,6 +42,9 @@ public class ResultActivity extends AppCompatActivity {
             int m = MainActivity.d + 5;
             if (n < 0) {
                 t1.setText("Number of lectures you can bunk : " + MainActivity.a + "\n" + "No. of lectures You have to attend: " + MainActivity.d + "-" + m);
+            }
+            else if(MainActivity.a>remaininglec){
+                t1.setText("Number of lectures you can bunk : "+ remaininglec  + "\n" + "No. of lectures You have to attend: " + MainActivity.d);
             }
             else if(MainActivity.d==0){
                 t1.setText("Number of lectures you can bunk : 0"  + "\n" + "No. of lectures You have to attend: " + MainActivity.d);
