@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         else if(BranchActivity.a==4){
             t1.setText("Computer Science");
         }
+        else if(BranchActivity.a==5){
+            t1.setText("Electrical");
+        }
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

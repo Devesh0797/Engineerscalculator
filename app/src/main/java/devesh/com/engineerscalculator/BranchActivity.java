@@ -15,11 +15,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class BranchActivity extends AppCompatActivity {
-    private Button b1,b2,b3,b4;
+    private Button b1,b2,b3,b4,b5;
     public static int TotalLecture;
     public static int a=0;
     private DatabaseReference rootref;
     private ProgressDialog progressDialog1;
+    public static String branch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class BranchActivity extends AppCompatActivity {
         b2=(Button)findViewById(R.id.btn_me);
         b3=(Button)findViewById(R.id.btn_ec);
         b4=(Button)findViewById(R.id.btn_cs);
+        b5=(Button)findViewById(R.id.btn_en);
 
 
         progressDialog1= new ProgressDialog(BranchActivity.this);
@@ -135,6 +137,15 @@ public class BranchActivity extends AppCompatActivity {
                         finish();
                     }
                 });
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                branch="EN";
+                a=5;
+                startActivity(new Intent(BranchActivity.this,sectionActivity.class));
+                finish();
             }
         });
     }
